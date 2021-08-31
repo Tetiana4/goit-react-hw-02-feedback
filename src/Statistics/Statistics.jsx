@@ -1,6 +1,11 @@
 import React from "react";
 
 export default function Statistics() {
+  //   state = {
+  //   good: 0,
+  //   neutral: 0,
+  //   bad: 0
+  // }
   return (
     <div>
       <h1>Please leave feedback</h1>
@@ -9,9 +14,15 @@ export default function Statistics() {
       <button type="button">Bad</button>
       <h2>Statistics</h2>
       <ul>
-        <li>Good:</li>
-        <li>Neutral:</li>
-        <li>Bad:</li>
+        <li>
+          <p>Good:</p>
+        </li>
+        <li>
+          <p>Neutral:</p>
+        </li>
+        <li>
+          <p>Bad:</p>
+        </li>
       </ul>
     </div>
   );
