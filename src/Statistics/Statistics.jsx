@@ -1,29 +1,58 @@
-import React from "react";
+import { React, Component } from "react";
 
-export default function Statistics() {
-  //   state = {
-  //   good: 0,
-  //   neutral: 0,
-  //   bad: 0
-  // }
-  return (
-    <div>
-      <h1>Please leave feedback</h1>
-      <button type="button">Good</button>
-      <button type="button">Neutral</button>
-      <button type="button">Bad</button>
-      <h2>Statistics</h2>
-      <ul>
-        <li>
-          <p>Good:</p>
-        </li>
-        <li>
-          <p>Neutral:</p>
-        </li>
-        <li>
-          <p>Bad:</p>
-        </li>
-      </ul>
-    </div>
-  );
+class Statistics extends Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
+
+  handleGood = () => {
+    this.setState((prevState) => ({
+      good: prevState.good + 1,
+    }));
+  };
+
+  handleNeutral = () => {
+    this.setState((prevState) => ({
+      neutral: prevState.neutral + 1,
+    }));
+  };
+
+  handleBad = () => {
+    this.setState((prevState) => ({
+      bad: prevState.bad + 1,
+    }));
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Please leave feedback</h1>
+        <button type="button" onClick={this.handleGood}>
+          Good
+        </button>
+        <button type="button" onClick={this.handleNeutral}>
+          Neutral
+        </button>
+        <button type="button" onClick={this.handleBad}>
+          Bad
+        </button>
+        <h2>Statistics:</h2>
+        <ul>
+          <li>
+            <p>Good: {this.state.good}</p>
+          </li>
+          <li>
+            <p>Neutral: {this.state.neutral}</p>
+          </li>
+          <li>
+            <p>Bad: {this.state.bad}</p>
+          </li>
+        </ul>
+      </div>
+    );
+  }
 }
+
+export default Statistics;
