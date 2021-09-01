@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeedbackOptions = ({ onHandleGood, onHandleNeutral, onHandleBad }) => (
   <div>
-    {/* <h1>Please leave feedback</h1> */}
+    <h1>Please leave feedback</h1>
     <button type="button" onClick={onHandleGood}>
       Good
     </button>
