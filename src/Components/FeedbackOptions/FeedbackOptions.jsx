@@ -1,18 +1,20 @@
 import React from 'react';
+import { Container, Title, Button } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ onHandleGood, onHandleNeutral, onHandleBad }) => (
-  <div>
-    <h1>Please leave feedback</h1>
-    <button type="button" onClick={onHandleGood}>
+  <Container>
+    <Title>Please leave feedback</Title>
+
+    <Button type="button" onClick={onHandleGood}>
       Good
-    </button>
-    <button type="button" onClick={onHandleNeutral}>
+    </Button>
+    <Button type="button" onClick={onHandleNeutral}>
       Neutral
-    </button>
-    <button type="button" onClick={onHandleBad}>
+    </Button>
+    <Button type="button" onClick={onHandleBad}>
       Bad
-    </button>
-  </div>
+    </Button>
+  </Container>
 );
 
 export default FeedbackOptions;
