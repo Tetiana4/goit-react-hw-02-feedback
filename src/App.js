@@ -46,7 +46,7 @@ class App extends Component {
           onHandleBad={this.handleBad}
         />
         {this.countTotalFeedback(this.state) === 0 ? (
-          <Notification message="No feedback given"></Notification>
+          <Notification message="No feedback given" />
         ) : (
           <Statistics
             onGood={this.state.good}
