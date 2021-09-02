@@ -17,10 +17,13 @@ export const Button = styled.button`
   background-color: #452c27;
   color: #c69a91;
   border-radius: 20px;
-  margin: 0 auto 100px;
+  margin: 0 10px 100px;
   width: 80px;
   height: 30px;
-  &:hover {
-    border: 1px solid #573831;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    border: 1px solid #eee2df;
   }
 `;
