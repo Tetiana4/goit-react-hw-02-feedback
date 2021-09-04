@@ -16,7 +16,6 @@ export const Title = styled.h2`
 `;
 
 export const Button = styled.button`
-  margin: 0 10px 100px;
   width: 80px;
   height: 30px;
 
@@ -32,4 +31,15 @@ export const Button = styled.button`
     border: 1px solid #cea9a1;
     transform: scale(1.1);
   }
+`;
+
+export const List = styled.li`
+  list-style: none;
+  margin: 0 auto;
+`;
+
+export const Div = styled.div`
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 `;

@@ -13,23 +13,23 @@ class App extends Component {
     bad: 0,
   };
 
-  handleGood = () => {
-    this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
-  };
+  // handleGood = () => {
+  //   this.setState(prevState => ({
+  //     good: prevState.good + 1,
+  //   }));
+  // };
 
-  handleNeutral = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
+  // handleNeutral = () => {
+  //   this.setState(prevState => ({
+  //     neutral: prevState.neutral + 1,
+  //   }));
+  // };
 
-  handleBad = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }));
-  };
+  // handleBad = () => {
+  //   this.setState(prevState => ({
+  //     bad: prevState.bad + 1,
+  //   }));
+  // };
 
   countTotalFeedback() {
     const totalFeedback = Object.values(this.state);
@@ -40,6 +40,12 @@ class App extends Component {
     return Math.round((this.state.good * 100) / this.countTotalFeedback());
   }
 
+  leaveFeedback = option => {
+    this.setState(prevSate => ({
+      [option]: prevSate[option] + 1,
+    }));
+  };
+
   render() {
     const { good } = this.state;
     const { neutral } = this.state;
@@ -48,9 +54,8 @@ class App extends Component {
     return (
       <>
         <FeedbackOptions
-          onHandleGood={this.handleGood}
-          onHandleNeutral={this.handleNeutral}
-          onHandleBad={this.handleBad}
+          options={this.state}
+          onHandleButton={this.leaveFeedback}
         />
 
         {this.countTotalFeedback(this.state) === 0 ? (

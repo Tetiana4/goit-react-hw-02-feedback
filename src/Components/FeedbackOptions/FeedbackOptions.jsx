@@ -1,20 +1,25 @@
 import React from 'react';
-import { Container, Title, Button } from './FeedbackOptions.styled';
+import { Component } from 'react';
+import { Container, Title, List, Div, Button } from './FeedbackOptions.styled';
 
-const FeedbackOptions = ({ onHandleGood, onHandleNeutral, onHandleBad }) => (
-  <Container>
-    <Title>Please leave feedback</Title>
-
-    <Button type="button" onClick={onHandleGood}>
-      Good
-    </Button>
-    <Button type="button" onClick={onHandleNeutral}>
-      Neutral
-    </Button>
-    <Button type="button" onClick={onHandleBad}>
-      Bad
-    </Button>
-  </Container>
-);
+class FeedbackOptions extends Component {
+  render() {
+    const { options, onHandleButton } = this.props;
+    return (
+      <Container>
+        <Title>Please leave feedback</Title>
+        <Div>
+          {Object.keys(options).map(option => (
+            <List key={option}>
+              <Button type="button" onClick={() => onHandleButton(option)}>
+                {option}
+              </Button>
+            </List>
+          ))}
+        </Div>
+      </Container>
+    );
+  }
+}
 
 export default FeedbackOptions;
