@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   color: #eee2df;
   text-transform: uppercase;
@@ -34,12 +34,10 @@ export const Button = styled.button`
 `;
 
 export const List = styled.li`
-  list-style: none;
-  margin: 0 auto;
-`;
-
-export const Div = styled.div`
-  display: flex;
-  justify-content: space-around;
+  margin: 0 10px;
+  display: inline-flex;
+  justify-content: center;
   text-align: center;
+
+  list-style: none;
 `;

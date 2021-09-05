@@ -13,24 +13,6 @@ class App extends Component {
     bad: 0,
   };
 
-  // handleGood = () => {
-  //   this.setState(prevState => ({
-  //     good: prevState.good + 1,
-  //   }));
-  // };
-
-  // handleNeutral = () => {
-  //   this.setState(prevState => ({
-  //     neutral: prevState.neutral + 1,
-  //   }));
-  // };
-
-  // handleBad = () => {
-  //   this.setState(prevState => ({
-  //     bad: prevState.bad + 1,
-  //   }));
-  // };
-
   countTotalFeedback() {
     const totalFeedback = Object.values(this.state);
     return totalFeedback.reduce((acc, item) => acc + item);
@@ -47,9 +29,7 @@ class App extends Component {
   };
 
   render() {
-    const { good } = this.state;
-    const { neutral } = this.state;
-    const { bad } = this.state;
+    const { good, neutral, bad } = this.state;
 
     return (
       <>
