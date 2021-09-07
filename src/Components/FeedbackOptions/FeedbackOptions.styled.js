@@ -25,7 +25,7 @@ export const Button = styled.button`
   border-radius: 10px;
   border: none;
   cursor: pointer;
-
+  transition: all 0.25s linear 0s;
   &:hover,
   &:focus {
     border: 1px solid #cea9a1;
